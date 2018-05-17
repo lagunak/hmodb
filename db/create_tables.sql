@@ -20,7 +20,7 @@ CREATE TABLE Temples (
 CREATE TABLE Events (
 	id INT(6) UNSIGNED AUTO_INCREMENT,
 	temple_id int(6) not null,
-	event_type varchar(20) not null,
+	event_type varchar(20) not null, -- mass, confessions, adoration...
 	start_time int(4) not null,
 	duration int(6),
 	weekday varchar(13), -- max is 7 numbers + 6 commas
@@ -35,7 +35,7 @@ CREATE TABLE Events (
 
 CREATE TABLE Calendars (
 	id int(6) unsigned auto_increment,
-	type varchar(15) not null,
+	type varchar(15) not null, -- delay, cancelation
 	ammount int(3) not null,
 	start_date int(4) not null,
 	end_date int(4) not null,
