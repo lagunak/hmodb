@@ -1,5 +1,7 @@
-CREATE DATABASE hmodb;
 
+CREATE DATABASE hmodb;  -- if not already created
+
+-- drop tables: to delete them (run this only if they exist) so we re-create them below
 drop table Temples;
 drop table Events;
 drop table Calendars;
