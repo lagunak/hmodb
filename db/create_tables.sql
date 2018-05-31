@@ -1,4 +1,6 @@
-
+-- To be able to connec to the database from MySQL Workbench, you need to add your IP to the Inbound permissions (Go to Console>EC2>SecurityGroups
+	-- Then select your Group (it's name is in the RDS Instance) and Edit the Inbound adding your IP
+	
 CREATE DATABASE hmodb;  -- if not already created
 
 -- drop tables: to delete them (run this only if they exist) so we re-create them below
