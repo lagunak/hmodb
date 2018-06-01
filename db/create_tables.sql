@@ -18,6 +18,7 @@ CREATE TABLE wwmTemples (
 	postal_code VARCHAR(15) NOT NULL,
 	reg_date TIMESTAMP,
 	related_calendar_ids varchar(1000),
+	apiKey varchar(100),
 	PRIMARY KEY (id)
 );
 
@@ -34,6 +35,7 @@ CREATE TABLE wwmEvents (
 	parent_event int(6),
 	comments varchar(100),
 	reg_date TIMESTAMP,
+	apiKey varchar(100),
 	PRIMARY KEY (id)    
 );
 
@@ -43,5 +45,6 @@ CREATE TABLE wwmCalendars (
 	ammount int(3) not null,
 	start_date int(4) not null,
 	end_date int(4) not null,
+	apiKey varchar(100),
 	PRIMARY KEY (id)
 );
