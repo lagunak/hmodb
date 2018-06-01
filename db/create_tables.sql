@@ -9,7 +9,7 @@ drop table wwmEvents;
 drop table wwmCalendars;
 
 CREATE TABLE wwmTemples (
-	id INT(6) UNSIGNED AUTO_INCREMENT,
+	id INT(10) UNSIGNED AUTO_INCREMENT,
 	name VARCHAR(50),
 	description varchar(200),
 	latitude DOUBLE NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE wwmTemples (
 );
 
 CREATE TABLE wwmEvents (
-	id INT(6) UNSIGNED AUTO_INCREMENT,
+	id INT(12) UNSIGNED AUTO_INCREMENT,
 	temple_id int(6) not null,
 	event_type varchar(20) not null, -- mass, confessions, adoration...
 	start_time int(4) not null,
@@ -40,7 +40,7 @@ CREATE TABLE wwmEvents (
 );
 
 CREATE TABLE wwmCalendars (
-	id int(6) unsigned auto_increment,
+	id int(12) unsigned auto_increment,
 	type varchar(15) not null, -- delay, cancelation
 	ammount int(3) not null,
 	start_date int(4) not null,
