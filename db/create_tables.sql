@@ -19,6 +19,7 @@ CREATE TABLE wwmTemples (
 	reg_date TIMESTAMP,
 	related_calendar_ids varchar(1000),
 	apiKey varchar(100),
+	source varchar(400),
 	PRIMARY KEY (id)
 );
 
