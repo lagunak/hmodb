@@ -4,11 +4,11 @@
 CREATE DATABASE hmodb;  -- if not already created
 
 -- drop tables: to delete them (run this only if they exist) so we re-create them below
-drop table wwmTemples;
-drop table wwmEvents;
-drop table wwmCalendars;
+drop table Temples;
+drop table Events;
+drop table Calendars;
 
-CREATE TABLE wwmTemples (
+CREATE TABLE Temples (
 	id INT(10) UNSIGNED AUTO_INCREMENT,
 	name VARCHAR(50),
 	description varchar(200),
@@ -23,7 +23,7 @@ CREATE TABLE wwmTemples (
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE wwmEvents (
+CREATE TABLE Events (
 	id INT(12) UNSIGNED AUTO_INCREMENT,
 	temple_id int(6) not null,
 	event_type varchar(20) not null, -- mass, confessions, adoration...
@@ -40,7 +40,7 @@ CREATE TABLE wwmEvents (
 	PRIMARY KEY (id)    
 );
 
-CREATE TABLE wwmCalendars (
+CREATE TABLE Calendars (
 	id int(12) unsigned auto_increment,
 	type varchar(15) not null, -- delay, cancelation
 	ammount int(3) not null,
