@@ -93,7 +93,9 @@ function parse_date(date) {
 }
 
 
-
+/**
+ * Check if the given date matches the given event.
+ */
 function is_on(event, date) {
 
     console.log("Queried date is: ", date)
@@ -126,3 +128,6 @@ var today = new Date()
 date = parse_date(today);
 
 is_on(event, date)
+
+
+export default is_on
