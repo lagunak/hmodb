@@ -93,9 +93,13 @@ function parse_date(date) {
 }
 
 
+/**
+ * Check if the given date matches the given event.
+ */
+function is_on(event, aDate) {
 
-function is_on(event, date) {
-
+    date = parse_date(aDate);  //this step should be part of the top-level function, so aDate is received as a normal standard date.
+    
     console.log("Queried date is: ", date)
 
     if (!event.weekday.includes(date.weekday)) return
@@ -123,6 +127,10 @@ function is_on(event, date) {
 
 var today = new Date()
 
-date = parse_date(today);
+//date = parse_date(today);
 
-is_on(event, date)
+//is_on(event, date)
+is_on(event, today)
+
+
+export default is_on
